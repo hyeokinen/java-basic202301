@@ -7,7 +7,7 @@ import static java.lang.Math.*;
 //import static java.lang.System.*;
 import static org.example.basic.DanceLevel.*;
 
-public class Dancer  {
+public class Dancer extends Object {
 
     // 상태불변 패턴을 만들때는 생성자로 해결한다.
     private final String crewName; // 팀 이름
@@ -74,5 +74,14 @@ public class Dancer  {
             return;
         }
         System.out.println(myName + "님이 춤을 춥니다");
+    }
+
+
+    public String getCrewName() {
+        return crewName;
+    }
+
+    public String getMyName() {
+        return myName;
     }
 }
