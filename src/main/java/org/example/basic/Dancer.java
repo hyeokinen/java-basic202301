@@ -9,6 +9,7 @@ import static org.example.basic.DanceLevel.*;
 
 public class Dancer extends Object {
 
+
     // 상태불변 패턴을 만들때는 생성자로 해결한다.
     private final String crewName; // 팀 이름
     private final String myName; // 내 이름
