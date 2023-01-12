@@ -31,10 +31,11 @@ public class Main {
         System.out.println();
 
         // Q2. 거래자가 근무하는 모든 도시를 중복 없이 나열
-        List<String> answer2 = transactions.stream()
+        List<String> collect = transactions.stream()
                 .map(transaction -> transaction.getTrader().getCity())
                 .distinct()
                 .collect(Collectors.toList());
+        List<String> answer2 = collect;
         answer2.forEach(System.out::println);
         System.out.println();
 
@@ -42,7 +43,7 @@ public class Main {
         List<Trader> answer3 = transactions.stream()
                 .map(Transaction::getTrader)
                 .filter(trader -> trader.getCity().equals("Cambridge"))
-                .distinct()
+                .distinct() // 중복제거
                 .sorted(Comparator.comparing(Trader::getName))
                 .collect(Collectors.toList());
         answer3.forEach(System.out::println);
